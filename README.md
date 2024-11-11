@@ -1,6 +1,9 @@
 # fox5-cpp
 Fox5 parser in C++
 
+# License?
+zlib, or basically "Do what you want, just don't claim you made it".
+
 # Where is fox5cipher?
 Not publicly available, specifically:
 ```cpp
@@ -12,7 +15,7 @@ Not publicly available, specifically:
 // Dragon's Eye Production.
 ```
 
-As in, unless you get permission from Dragon's Eye Production themself, I cannot / will not disclose it.
+As in, unless you get permission from Dragon's Eye Production (I will verify any such claims), I cannot / will not disclose it.
  If you are so inclined to, you may figure it out like I did. Here is the header you need to use in it's place:
 ```h
 void Fox5Cipher(std::vector<uint8_t>& data, uint32_t compressedSize, uint32_t uncompressedSize, const uint8_t seed[16])
@@ -29,7 +32,7 @@ This source includes sources from the [LZMA SDK](https://www.7-zip.org/sdk.html)
 
 These files are **PUBLIC DOMAIN** as per:
 > LZMA SDK is placed in the **public domain**.
-
+> 
 > Anyone is free to copy, modify, publish, use, compile, sell, or distribute the original LZMA SDK code, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
 
 Despite this, I feel it is important for me to clarify that these are not files I made myself.
