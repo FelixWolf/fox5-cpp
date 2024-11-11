@@ -408,7 +408,7 @@ void FOX5Command::parseData(uint8_t** dataPtr, uint8_t* dataEnd)
     }
 }
 
-void FOX5Sprite::parseData(uint8_t** dataPtr, uint8_t* dataEnd)
+void FOX5Channel::parseData(uint8_t** dataPtr, uint8_t* dataEnd)
 {
     while (*dataPtr < dataEnd)
     {
@@ -420,7 +420,7 @@ void FOX5Sprite::parseData(uint8_t** dataPtr, uint8_t* dataEnd)
             
             case FOX5Command::Command::LIST_START:
             {
-                throw std::runtime_error("FOX5Sprite can't contain lists");
+                throw std::runtime_error("FOX5Channel can't contain lists");
                 break;
             }
             
@@ -469,7 +469,7 @@ void FOX5Frame::parseData(uint8_t** dataPtr, uint8_t* dataEnd)
                 mSprites.resize(count);
                 for(uint32_t i = 0; i < count; i++)
                 {
-                    mSprites[i] = std::make_shared<FOX5Sprite>(
+                    mSprites[i] = std::make_shared<FOX5Channel>(
                         dataPtr, dataEnd
                     );
                 }

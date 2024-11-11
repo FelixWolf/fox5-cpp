@@ -172,7 +172,7 @@ public:
 };
 
 
-class FOX5Sprite : FOX5List
+class FOX5Channel : FOX5List
 {
 public:
     union
@@ -191,7 +191,7 @@ public:
     int16_t mOffset[2] = {0};
     
     void parseData(uint8_t** dataPtr, uint8_t* dataEnd);
-    FOX5Sprite(uint8_t** dataPtr, uint8_t* dataEnd)
+    FOX5Channel(uint8_t** dataPtr, uint8_t* dataEnd)
     {
         parseData(dataPtr, dataEnd);
     };
@@ -203,7 +203,7 @@ public:
     int16_t mFrameOffset[2] = {0};
     int16_t mFurreOffset[2] = {0};
     
-    std::vector<std::shared_ptr<FOX5Sprite>> mSprites;
+    std::vector<std::shared_ptr<FOX5Channel>> mSprites;
     
     void parseData(uint8_t** dataPtr, uint8_t* dataEnd);
     FOX5Frame(uint8_t** dataPtr, uint8_t* dataEnd)
