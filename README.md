@@ -19,7 +19,7 @@ void Fox5Cipher(std::vector<uint8_t>& data, uint32_t compressedSize, uint32_t un
 ```
 I believe anyone who has the ability to figure out the encryption mechanism knows what they are doing and *why it is a __bad idea__* to disclose such information to the public.
 
-# LZMA notice
+# LZMA included!
 This source includes sources from the [LZMA SDK](https://www.7-zip.org/sdk.html), specifically:
 * src/Compiler.h
 * src/Precomp.h
